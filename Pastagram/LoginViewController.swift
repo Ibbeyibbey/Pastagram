@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class LoginViewController: UIViewController {
 
@@ -23,8 +24,8 @@ class LoginViewController: UIViewController {
         let username = usernameField.text!
         let password = passwordField.text!
         
-        PFUser.logInWithUsername(inBackground: username, password: passwordField)
-            { (user, error) in
+        PFUser.logInWithUsername(inBackground: username, password: password)
+        { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
@@ -38,16 +39,14 @@ class LoginViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         
-        user.signUpInBackground {(success, error) in
+        user.signUpInBackground { (success, error) in
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 
             } else {
-                print("Error: \(error.localizedDescription)")
+                print("Error: \(error?.localizedDescription)")
             }
-            
         }
-        
     }
     /*
     // MARK: - Navigation

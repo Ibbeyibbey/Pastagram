@@ -6,7 +6,8 @@ target 'Pastagram' do
   use_frameworks!
 
   # Pods for Pastagram
-
+  pod 'Parse'
+  pod 'AlamofireImage'
   target 'PastagramTests' do
     inherit! :search_paths
     # Pods for testing

@@ -20,32 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // --- Copy this only
             
             let parseConfig = ParseClientConfiguration {
-                    $0.applicationId = "go8e6G805KU95q5GMAOOqHebXCouBx4lr2rmXl5D" // <- UPDATE
-                    $0.clientKey = "oPY73hLNgxcLNxzQpCKVv1Y7uog7tX6Ojc9H5LU2" // <- UPDATE
+                    $0.applicationId = "go8e6G805KU95q5GMAOOqHebXCouBx4lr2rmXl5D"
+                    $0.clientKey = "oPY73hLNgxcLNxzQpCKVv1Y7uog7tX6Ojc9H5LU2" 
                     $0.server = "https://parseapi.back4app.com"
             }
             Parse.initialize(with: parseConfig)
-            
-            // --- end copy
-        
-        
-        
-        
-        return true
-        
-        
-        
-        
+            return true
         
     }
 
-    
-    
-    
-    
-    
-    
-    
     
     // MARK: UISceneSession Lifecycle
 
